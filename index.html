@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness Program | Cybersecurity Training</title>
+    <meta name="description" content="Learn how to identify phishing attacks, avoid social engineering traps, and protect your digital identity with this interactive module.">
+    <!-- Google Fonts: Outfit for headings, Inter for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-effects">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav class="navbar glass-panel">
+        <div class="logo">Shield<span>Defend</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Start</a></li>
+            <li><a href="#identification">Identify Threats</a></li>
+            <li><a href="#social-engineering">Social Engineering</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#prevention">Prevention Tips</a></li>
+        </ul>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section reveal">
+            <div class="hero-content">
+                <span class="badge">Interactive Training Module</span>
+                <h1>Don't Get Hooked.<br><span class="text-gradient">Beat Phishing Attacks.</span></h1>
+                <p>Cybercriminals are getting smarter. Learn how to spot fake emails, fraudulent websites, and social engineering tricks to keep your digital identity safe.</p>
+                <a href="#identification" class="btn primary-btn">Start Training</a>
+            </div>
+            <div class="hero-image">
+                <div class="mockup-card glass-panel floating">
+                    <div class="mockup-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="sender text-red">URGENT: Verify your account immediately!</div>
+                        <div class="subject">From: security@paypal-verify-update.com</div>
+                        <div class="content">Dear Customer, your account has been restricted. Click here to verify your details or your account will be permanently deleted.</div>
+                        <button class="btn danger-btn fake-btn">Verify Now</button>
+                    </div>
+                    <div class="alert-badge">Phishing Attempt Detected</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Identification Section -->
+        <section id="identification" class="topic-section reveal">
+            <div class="section-header">
+                <h2>Spotting the Bait</h2>
+                <p>How to identify suspicious emails, fake login pages, and fraudulent websites.</p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="info-card glass-panel">
+                    <div class="icon-wrapper alert-icon"></div>
+                    <h3>Suspicious Emails</h3>
+                    <ul>
+                        <li><strong>Check the Sender:</strong> Look closely at the email address. Is it slightly misspelled? (e.g., support@amozon.com instead of amazon.com)</li>
+                        <li><strong>Urgent Tone:</strong> Phishing emails often create a false sense of urgency (e.g., "Act immediately," "Account suspended").</li>
+                        <li><strong>Generic Greetings:</strong> Using "Dear Customer" instead of your actual name.</li>
+                    </ul>
+                </div>
+
+                <div class="info-card glass-panel">
+                    <div class="icon-wrapper lock-icon"></div>
+                    <h3>Fake Login Pages & URLs</h3>
+                    <ul>
+                        <li><strong>Inspect the URL:</strong> Hover over links without clicking to see where they lead.</li>
+                        <li><strong>Missing HTTPS:</strong> Look for the padlock icon in the browser, though attackers can use HTTPS too. Check the domain carefully.</li>
+                        <li><strong>Poor Design:</strong> Look for low-resolution logos, spelling mistakes, or strange layouts.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Quiz 1 -->
+            <div class="quiz-container glass-panel" id="quiz1">
+                <div class="quiz-header">
+                    <span class="quiz-badge">Knowledge Check</span>
+                    <h3>Identify the Threat</h3>
+                </div>
+                <p class="question">You receive an email from "security@netfIix-support.com" (notice the capital 'I' instead of 'l') claiming your subscription has expired. It asks you to click a link to update your payment info. What should you do?</p>
+                <div class="options">
+                    <button class="option-btn" data-correct="false" onclick="checkAnswer('quiz1', this)">Click the link but only enter my password, not my credit card.</button>
+                    <button class="option-btn" data-correct="false" onclick="checkAnswer('quiz1', this)">Reply to the email and ask if it's real.</button>
+                    <button class="option-btn" data-correct="true" onclick="checkAnswer('quiz1', this)">Do not click the link. Log into Netflix directly by typing the URL into your browser to check your account status.</button>
+                </div>
+                <div class="feedback hidden"></div>
+            </div>
+        </section>
+
+        <!-- Social Engineering Section -->
+        <section id="social-engineering" class="topic-section reveal">
+            <div class="section-header">
+                <h2>The Art of Manipulation</h2>
+                <p>Common social engineering techniques cybercriminals use to trick you.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item glass-panel">
+                    <div class="timeline-content">
+                        <h3>Spear Phishing</h3>
+                        <p>Unlike generic phishing, spear phishing is highly targeted. Attackers research you (using social media) to craft a customized email that looks like it's from someone you know, like your boss or a colleague.</p>
+                    </div>
+                </div>
+                <div class="timeline-item glass-panel">
+                    <div class="timeline-content">
+                        <h3>Whaling</h3>
+                        <p>A specific form of spear phishing targeting high-profile individuals like CEOs or CFOs. The goal is often to authorize large wire transfers or steal highly sensitive company data.</p>
+                    </div>
+                </div>
+                <div class="timeline-item glass-panel">
+                    <div class="timeline-content">
+                        <h3>Vishing & Smishing</h3>
+                        <p><strong>Vishing (Voice Phishing):</strong> Fraudulent phone calls claiming to be from your bank or tech support.<br><strong>Smishing (SMS Phishing):</strong> Phishing attempts sent via text message, often containing malicious links.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz 2 -->
+            <div class="quiz-container glass-panel" id="quiz2">
+                <div class="quiz-header">
+                    <span class="quiz-badge">Knowledge Check</span>
+                    <h3>Understanding Techniques</h3>
+                </div>
+                <p class="question">You receive a text message: "FedEx: Your package delivery failed. Please click here to reschedule: http://bit.ly/fedex-update2". What type of attack is this?</p>
+                <div class="options">
+                    <button class="option-btn" data-correct="false" onclick="checkAnswer('quiz2', this)">Whaling</button>
+                    <button class="option-btn" data-correct="true" onclick="checkAnswer('quiz2', this)">Smishing</button>
+                    <button class="option-btn" data-correct="false" onclick="checkAnswer('quiz2', this)">Spear Phishing</button>
+                    <button class="option-btn" data-correct="false" onclick="checkAnswer('quiz2', this)">Vishing</button>
+                </div>
+                <div class="feedback hidden"></div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section id="case-studies" class="topic-section reveal">
+            <div class="section-header">
+                <h2>Real-world Consequences</h2>
+                <p>Examine realistic case studies to understand the impact of phishing.</p>
+            </div>
+
+            <div class="case-study-grid">
+                <div class="case-card glass-panel">
+                    <div class="case-header danger">Case Study A: The Fake Invoice</div>
+                    <div class="case-body">
+                        <h4>The Attack</h4>
+                        <p>An employee in accounts payable received an email from their "vendor" containing an updated invoice. The email looked legitimate, mimicking the vendor's signature and logo.</p>
+                        <h4>The Mistake</h4>
+                        <p>The employee didn't notice the sender's email domain was slightly altered (e.g., <em>vendor-inc.com</em> instead of <em>vendor.com</em>). They downloaded the attached PDF invoice.</p>
+                        <h4>The Impact</h4>
+                        <p>The PDF contained malware that deployed ransomware across the corporate network, paralyzing operations for a week.</p>
+                    </div>
+                </div>
+
+                <div class="case-card glass-panel">
+                    <div class="case-header warning">Case Study B: The Urgent CEO Request</div>
+                    <div class="case-body">
+                        <h4>The Attack</h4>
+                        <p>A junior finance manager received an email from the "CEO" while the CEO was allegedly traveling. The email urgently requested a $50,000 wire transfer for a "confidential acquisition."</p>
+                        <h4>The Mistake</h4>
+                        <p>Feeling pressured by the "CEO's" authority and the urgency of the request, the manager bypassed standard verification procedures and authorized the transfer.</p>
+                        <h4>The Impact</h4>
+                        <p>The funds were sent to an offshore account controlled by attackers and were unrecoverable. This is a classic example of Business Email Compromise (BEC).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz 3 -->
+            <div class="quiz-container glass-panel" id="quiz3">
+                <div class="quiz-header">
+                    <span class="quiz-badge">Knowledge Check</span>
+                    <h3>Applying Lessons</h3>
+                </div>
+                <p class="question">In Case Study B (The Urgent CEO Request), what was the most critical mistake the employee made?</p>
+                <div class="options">
+                    <button class="option-btn" data-correct="true" onclick="checkAnswer('quiz3', this)">Bypassing standard verification procedures due to perceived authority and urgency.</button>
+                    <button class="option-btn" data-correct="false" onclick="checkAnswer('quiz3', this)">Opening an email while the CEO was traveling.</button>
+                    <button class="option-btn" data-correct="false" onclick="checkAnswer('quiz3', this)">Using the wrong wire transfer service.</button>
+                </div>
+                <div class="feedback hidden"></div>
+            </div>
+        </section>
+
+        <!-- Prevention Section -->
+        <section id="prevention" class="topic-section reveal">
+            <div class="section-header">
+                <h2>Stay Secure</h2>
+                <p>Practical security tips to protect yourself and your organization.</p>
+            </div>
+
+            <div class="tips-grid">
+                <div class="tip-card glass-panel">
+                    <div class="tip-number">01</div>
+                    <h3>Think Before You Click</h3>
+                    <p>Never click on links or download attachments in unsolicited emails. Always verify the source first.</p>
+                </div>
+                <div class="tip-card glass-panel">
+                    <div class="tip-number">02</div>
+                    <h3>Enable MFA</h3>
+                    <p>Use Multi-Factor Authentication (MFA) on all accounts. Even if attackers steal your password, they can't access your account without the second factor.</p>
+                </div>
+                <div class="tip-card glass-panel">
+                    <div class="tip-number">03</div>
+                    <h3>Verify via Alternate Channels</h3>
+                    <p>If you receive a suspicious request for money or sensitive data, verify it by calling the sender using a trusted phone number (not the one in the email).</p>
+                </div>
+                <div class="tip-card glass-panel">
+                    <div class="tip-number">04</div>
+                    <h3>Keep Software Updated</h3>
+                    <p>Regularly update your operating system, browser, and antivirus software to patch security vulnerabilities.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-panel">
+        <div class="footer-content">
+            <div class="logo">Shield<span>Defend</span></div>
+            <p>Empowering users to navigate the digital world safely. Phishing Awareness Training Module.</p>
+            <p class="copyright">&copy; 2026 ShieldDefend Cybersecurity. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
